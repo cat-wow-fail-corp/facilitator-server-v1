@@ -13,6 +13,8 @@ GEM
       rack (~> 2.0)
       rack-protection (= 2.0.0)
       tilt (~> 2.0)
+    sinatra-helpers (0.2.0)
+      sinatra (>= 1.0)
     temple (0.8.0)
     tilt (2.0.8)
 
@@ -22,6 +24,7 @@ PLATFORMS
 DEPENDENCIES
   haml
   sinatra
+  sinatra-helpers
 
 BUNDLED WITH
    1.15.4

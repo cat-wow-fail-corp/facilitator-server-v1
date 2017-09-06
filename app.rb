@@ -4,7 +4,6 @@ require 'haml'
 
 class MyApp < Sinatra::Application
   enable :sessions
-  set :views, File.expand_path('.',  __dir__)
 
   configure :production do
     set :haml, { :ugly=>true }
@@ -20,10 +19,12 @@ class MyApp < Sinatra::Application
     alias_method :h, :escape_html
   end
 
-  get '/' do
-    haml :layout
+  get '/dashboard' do
+    haml :dashboard
   end
-end
 
-require_relative 'features/init.rb'
-require_relative 'website/dashboard-page/init.rb'
+	get '/logs' do
+		content_type :json
+		{ :database_logs => ['Log Line 1', 'Log Line 2'], :application_logs => ['Log Line 1', 'Log Line 2'] }.to_json
+	end
+end

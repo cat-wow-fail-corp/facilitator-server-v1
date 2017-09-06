@@ -4,6 +4,7 @@ GEM
     haml (5.0.2)
       temple (>= 0.8.0)
       tilt
+    json (1.8.1)
     mustermann (1.0.1)
     rack (2.0.3)
     rack-protection (2.0.0)
@@ -23,6 +24,7 @@ PLATFORMS
 
 DEPENDENCIES
   haml
+  json
   sinatra
   sinatra-helpers
 
